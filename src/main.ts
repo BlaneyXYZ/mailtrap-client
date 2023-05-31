@@ -1,5 +1,2 @@
-import { Client, IClientOptions } from "./client/Client";
-import { Inbox } from "./lib/Inbox";
-
-exports.Client = Client;
-exports.Inbox = Inbox;
+export { Client, IClientOptions } from "./client/Client";
+export { Inbox } from "./lib/Inbox";
