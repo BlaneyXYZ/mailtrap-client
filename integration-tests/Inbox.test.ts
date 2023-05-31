@@ -2,13 +2,14 @@ import { Inbox } from "../src/lib/Inbox";
 import { IClientOptions, Client } from "../src/client/Client";
 import { sendMail } from "./utils/send-mail";
 import { MessageBodyType } from "../src/client/MessageBodyType";
+require('dotenv').config();
 
 const options: IClientOptions = {
-  apiToken: process.env.API_TOKEN,
+  apiToken: process.env.API_TOKEN as string,
 };
 
 const client = new Client(options);
-const inbox = new Inbox(client, "inbox");
+const inbox = new Inbox(client, process.env.MT_INBOX as string);
 
 describe("Integration - Inbox", () => {
   beforeAll(async () => {

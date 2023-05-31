@@ -1,6 +1,6 @@
 {
   "name": "mailtrap",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "description": "simple mailtrap.io client and library",
   "main": "main.js",
   "types": "main.d.ts",
@@ -32,6 +32,7 @@
     "typescript": "^3.0.1"
   },
   "dependencies": {
+    "dotenv": "^16.1.3",
     "moment": "^2.21.0"
   },
   "ava": {

@@ -1,16 +1,17 @@
 import * as nodemailer from "nodemailer";
+require('dotenv').config();
 
 const transporter = nodemailer.createTransport({
-  host: "smtp.mailtrap.io",
+  host: "sandbox.smtp.mailtrap.io",
   port: 2525,
   auth: {
-    user: process.env.USERNAME,
-    pass: process.env.PASSWORD,
+    user: process.env.MT_USERNAME,
+    pass: process.env.MT_PASSWORD,
   },
 });
 
 export const sendMail = async (mailOptions: IMailOptions) => {
-  await new Promise(resolve => transporter.sendMail(mailOptions, (error, info) => {
+  await new Promise<void>(resolve => transporter.sendMail(mailOptions, (error, info) => {
     if (error) {
         return console.log(error);
     }
