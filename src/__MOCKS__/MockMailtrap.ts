@@ -1,5 +1,5 @@
 /* tslint:disable */
-import express = require("express");
+import express from 'express';
 
 const app = express();
 
