@@ -1,4 +1,5 @@
 import { IBlacklistsReportInfo } from "./IBlacklistsReportInfo";
+import { ISMTPInformation } from "./ISMTPInformation";
 
 export interface IMessage {
   id: number;
@@ -23,4 +24,5 @@ export interface IMessage {
   download_path: string;
   viruses_report_info: boolean;
   blacklists_report_info: IBlacklistsReportInfo;
+  smtp_information: ISMTPInformation;
 }

@@ -19,13 +19,17 @@ describe("Integration - Inbox", () => {
       subject: "test1",
       text: "message 1",
       html: "html1",
+      cc:"cc@1.com",
+      bcc:"bcc@1.com",
     });
     await sendMail({
       from: "test@test.com",
-      to: "hello@1.com",
+      to: "hello@2.com",
       subject: "test2",
       text: "message 2",
       html: "html2",
+      cc:"cc@2.com",
+      bcc:"bcc@2.com",
     });
   });
 
@@ -45,7 +49,7 @@ describe("Integration - Inbox", () => {
     expect(messages).toMatchObject([
       {
         from_email: "test@test.com",
-        to_email: "hello@1.com",
+        to_email: "hello@2.com",
         subject: "test2",
       },
       {
