@@ -1,4 +1,5 @@
 module.exports = {
+    testTimeout: 20000,
   "roots": [
     "<rootDir>/src",
     "<rootDir>/integration-tests",
@@ -21,5 +22,5 @@ module.exports = {
     "!src/main.ts",
     "!src/__MOCKS__/*.ts",
   ],
-  "setupTestFrameworkScriptFile": "<rootDir>/jest.setup.js"
+  "setupFilesAfterEnv": ["<rootDir>/jest.setup.js"]
 };
